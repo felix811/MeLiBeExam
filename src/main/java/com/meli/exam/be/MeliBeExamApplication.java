@@ -1,0 +1,13 @@
+package com.meli.exam.be;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MeliBeExamApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MeliBeExamApplication.class, args);
+	}
+
+}
