@@ -1,6 +1,6 @@
 package com.meli.exam.be.domain.services;
 
-public interface IMutantService {
+public interface IDnaService {
 
 	boolean isMutant(String[] dna);
 	
