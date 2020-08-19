@@ -7,6 +7,10 @@ public class DnaRequest {
 	@JsonProperty("dna")
     private String[] dna;
 
+	public DnaRequest() {
+		
+	}
+	
 	public DnaRequest(String[] dna) {
 		this.dna = dna;
 	}

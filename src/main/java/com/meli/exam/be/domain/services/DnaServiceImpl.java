@@ -81,7 +81,7 @@ public class DnaServiceImpl implements IDnaService {
 		
 		if(minDimension > dimension)
 			return false;
-		
+		 
 		short i = 0;
 		
 		while(i < dnaString.length) {

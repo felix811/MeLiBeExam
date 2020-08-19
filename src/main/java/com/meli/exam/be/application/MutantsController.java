@@ -3,6 +3,7 @@ package com.meli.exam.be.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,20 +22,20 @@ public class MutantsController {
 	@Autowired
 	IDnaService mutantService;
 	
-	@RequestMapping("/")
 	@PostMapping
 	@JsonProperty("dna")
-	public
-	HttpStatus isMutant(@RequestBody DnaRequest dna) {
+	public ResponseEntity isMutant(@RequestBody DnaRequest dna) {
 		
 		if(mutantService.isMutant(dna.getDna()))
-			return HttpStatus.OK;
+			return ResponseEntity.status(HttpStatus.OK).build();
 //		else {
 //			throw new ResponseStatusException(
 //					  HttpStatus.FORBIDDEN
 //					);
 	    //}
-		return HttpStatus.FORBIDDEN;
+		return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+
+		
 		
 	}
 }

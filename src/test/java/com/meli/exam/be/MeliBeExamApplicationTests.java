@@ -25,123 +25,109 @@ class MeliBeExamApplicationTests {
 	void contextLoads() {
 	}
 	
-	@Test
+	@Test 
 	 public void invalidDnaTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getInvalidN6Dna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.FORBIDDEN);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getInvalidN6Dna())).getStatusCode())
+			.isEqualTo(HttpStatus.FORBIDDEN);
 	 }
 	
 	@Test
 	public void invalidN3DnaTest() {
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getInvalidN3Dna()));
 		
-		assertThat(ret).isEqualTo(HttpStatus.FORBIDDEN);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getInvalidN3Dna())).getStatusCode())
+			.isEqualTo(HttpStatus.FORBIDDEN);
 	}
 	
 	@Test
 	public void invalid4x6DnaTest() {
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getInvalid4x6Dna()));
 		
-		assertThat(ret).isEqualTo(HttpStatus.FORBIDDEN);
-		
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getInvalid4x6Dna())).getStatusCode())
+			.isEqualTo(HttpStatus.FORBIDDEN);
 	}
 	
 	@Test
 	public void invalidNotSquareDnaTest() {
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getInvalidNotSquareDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.FORBIDDEN);
-		
+
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getInvalidNotSquareDna())).getStatusCode())
+			.isEqualTo(HttpStatus.FORBIDDEN);
 	}
 	
 	@Test
 	 public void validHumanDnaTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidHumanN6Dna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.FORBIDDEN);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidHumanN6Dna())).getStatusCode())
+			.isEqualTo(HttpStatus.FORBIDDEN);
 	 }
 	
 	//ValidMutant Dna
 	@Test
 	 public void validExistingMutantDnaTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getvalidExistingMutantN6Dna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getvalidExistingMutantN6Dna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaRowTest() {
-		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6RowDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6RowDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaColumnTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6ColumnDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6ColumnDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaDiagonalTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6DiagonalDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6DiagonalDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaRowAndDiagonalTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6RowAndDiagonalDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6RowAndDiagonalDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaRowAndColumnTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6RowAndColumnDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6RowAndColumnDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaColumnAndDiagonalTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6ColumnAndDiagonalDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN6ColumnAndDiagonalDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaN4RowAndDiagonalTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN4RowAndDiagonalDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN4RowAndDiagonalDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaN10RowAndDiagonalTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN10RowDiagonalDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN10RowDiagonalDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 	
 	@Test
 	 public void validMutantDnaN10DualRowTest() {
 		
-		HttpStatus ret = controller.isMutant(new DnaRequest(DnaCases.getValidMutantN10DualRowDna()));
-		
-		assertThat(ret).isEqualTo(HttpStatus.OK);
+		assertThat(controller.isMutant(new DnaRequest(DnaCases.getValidMutantN10DualRowDna())).getStatusCode())
+			.isEqualTo(HttpStatus.OK);
 	 }
 }
