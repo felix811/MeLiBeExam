@@ -13,10 +13,9 @@ public class MutantRatioStat {
 		this.humansCount = humansCount;
 		
 		if(humansCount != 0)
-			this.ratio = mutantsCount / humansCount;
+			this.ratio = ((float)mutantsCount / (float)humansCount);
 		else
 			this.ratio = 1;
-			
 	}
 	
 	
@@ -24,16 +23,9 @@ public class MutantRatioStat {
 		return mutantsCount;
 	}
 
-	public void setMutantsCount(int mutantsCount) {
-		this.mutantsCount = mutantsCount;
-	}
 
 	public int getHumansCount() {
 		return humansCount;
-	}
-
-	public void setHumansCount(int humansCount) {
-		this.humansCount = humansCount;
 	}
 
 	public float getRatio() {

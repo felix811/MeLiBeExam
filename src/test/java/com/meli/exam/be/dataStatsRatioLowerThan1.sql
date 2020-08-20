@@ -1,0 +1,11 @@
+INSERT INTO dna(
+	dna_string, dna_type)
+	VALUES ('CTGGGG;CATTGC;TTATGT;AGAGTG;CCGCTT;TCACTG;','M');
+	
+INSERT INTO dna(
+	dna_string, dna_type)
+	VALUES ('CTGCGA;CAGTGC;TTATGT;AGAATG;CCTCTA;TCACTG;','H');
+	
+INSERT INTO dna(
+	dna_string, dna_type)
+	VALUES ('TTGCGA;CAGTGC;TTATGT;AGAGTG;CCTCTA;TCGCTG;','H');

@@ -20,9 +20,9 @@ public class DnaRequest {
 		return dna;
 	}
 
-	public void setDna(String[] dna) {
-		this.dna = dna;
-	}
+//	public void setDna(String[] dna) {
+//		this.dna = dna;
+//	}
 	
 	
 	

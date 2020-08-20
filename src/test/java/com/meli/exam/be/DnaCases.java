@@ -18,7 +18,9 @@ public final class DnaCases {
 
 	//Valid human Dna
 	private static String[] validHumanN6Dna = {"CTGCGA","CAGTGC","TTATGT","AGAATG","CCTCTA","TCACTG"};
-		
+	
+	private static String[] validHumanN6Dna2 = {"TTGCGA","CAGTGC","TTATGT","AGAGTG","CCTCTA","TCGCTG"};
+ 		
 	
 	//Valid cases
 	private static String[] validExistingMutantN6Dna = {"ATGCGA","CAGTGC","TTATGT","AGAATG","CCCCTA","TCACTG"};
@@ -57,6 +59,10 @@ public final class DnaCases {
 	
 	public static String[] getValidHumanN6Dna() {
 		return validHumanN6Dna;
+	}
+	
+	public static String[] getValidHumanN6Dna2() {
+		return validHumanN6Dna2;
 	}
 
 	public static String[] getInvalid4x6Dna() {

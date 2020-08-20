@@ -6,6 +6,15 @@ public class Dna {
 	private String[] dnaString;
 	
 	private String dnaType;
+	
+	public Dna() {
+		
+	}
+	public Dna(String[] dnaString, String dnaType) {
+		this.dnaString = dnaString;
+		this.dnaType = dnaType;
+	}
+	
 
 	public String[] getDnaString() {
 		return dnaString;

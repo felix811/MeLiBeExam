@@ -14,6 +14,16 @@ public class MutantStatsDto {
 		this.ratio = 0;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		
+		MutantStatsDto m = (MutantStatsDto)o;
+	
+		return m.getCount_human_dna() == this.count_human_dna &&
+				m.getCount_mutant_dna() == this.count_mutant_dna &&
+				m.getRatio() == this.ratio;
+				
+	}
 	
 	public int getCount_mutant_dna() {
 		return count_mutant_dna;
