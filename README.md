@@ -13,10 +13,10 @@ La Api se encuentra hosteada en Gloogle App Engine. El link de la misma es:
 	https://secure-wonder-285918.rj.r.appspot.com
 ```
 
-### *Metodos expuestos*
+### *Métodos expuestos*
 
 
-### *Verificacion de ADN*
+### *Verificación de ADN*
 
 Para determinar si una cadena de ADN pertenece a un mutante utilizar el endpoint
 
