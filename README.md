@@ -1,9 +1,9 @@
 # MeLiBeExam - Felix Sabate
 
 ## *Descripción*
-Este proyecto contiene la resolucion del examen de ingreso para Desarrollador BackEnd en Mercado Libre.
-Se encuentra desarrollado en Java + Spring Boot y utiliza PostgreSQL como motor de Base de Datos.
-El proyecto esta modelado con DDD. Incluye Test unitarios con Code coverage > 95%.
+Este proyecto contiene la resolución del examen de ingreso para Desarrollador BackEnd en Mercado Libre.
+Se encuentra desarrollado en Java + Spring Boot y utiliza PostgreSQL cómo motor de Base de Datos.
+El proyecto está modelado con DDD. Incluye Test unitarios con Code coverage > 95%.
 
 ##*Api URL*
 
@@ -24,7 +24,7 @@ Para determinar si una cadena de ADN pertenece a un mutante utilizar el endpoint
 	.../mutant/
 ```
 
-Se debe invocar mediante HTTP Post, por ejemplo:
+Se debe invocar mediante HTTP Post, por ejémplo:
 
 ```
 	{
@@ -32,13 +32,13 @@ Se debe invocar mediante HTTP Post, por ejemplo:
 	}
 ```
 
-En caso de que el ADN corresponda a un mutante se devolvera un HTTP 200-OK, en caso contrario un
+En caso de que el ADN corresponda a un mutante se devolverá un HTTP 200-OK, en caso contrario un
 403-Forbidden
 
 
-### *Estadisticas*
+### *Estadísticas*
 
-Para obtener las estadisticas de la cantidad de ADN Humano y Mutante analizado se debe consultar el siguiente endpoint con un HTTP GET
+Para obtener las estadísticas de la cantidad de ADN Humano y Mutante analizado se debe consultar el siguiente endpoint con un HTTP GET
 
 ```
 	.../stats
