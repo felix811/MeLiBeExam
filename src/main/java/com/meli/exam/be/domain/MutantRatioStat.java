@@ -13,7 +13,7 @@ public class MutantRatioStat {
 		this.humansCount = humansCount;
 		
 		if(humansCount != 0)
-			this.ratio = ((float)mutantsCount / (float)humansCount);
+			this.ratio = Math.round((((float)mutantsCount / (float)humansCount)*100))/(float)100;
 		else
 			this.ratio = 1;
 	}

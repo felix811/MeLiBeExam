@@ -1,6 +1,6 @@
 package com.meli.exam.be;
 
-public final class DnaCases {
+public abstract class DnaCases {
 
 
 	//Invalid Dna
@@ -43,7 +43,7 @@ public final class DnaCases {
 	
 	private static String[] validMutantN10DualRowDna = {"CTGCGACGAT","CAGTGCATAT","TTATGTGCTA","GGGGGGGGAT","CCTCTATACC","TCACTGCAGT","GACTTGACTG","CCATAACTTC","GTACGATAGA","ATGGATCGTA"};
 
-	
+	 
 	//Getters
 	public static  String[] getValidMutantN6RowDna() {
 		return validMutantN6RowDna;

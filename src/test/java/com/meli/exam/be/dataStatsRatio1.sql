@@ -1,4 +1,0 @@
-INSERT INTO dna(
-	dna_string, dna_type)
-	VALUES ('CTGCGA;CAGTGC;TCATGT;AGCATG;CCGTAA;TCTCTG;','M');
-	

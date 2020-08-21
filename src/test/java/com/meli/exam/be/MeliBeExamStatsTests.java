@@ -1,14 +1,13 @@
 package com.meli.exam.be;
 
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
-import org.junit.FixMethodOrder;
-import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 
 import com.meli.exam.be.application.StatsController;
@@ -18,10 +17,9 @@ import com.meli.exam.be.repository.IDnaRepository;
 
 
 
-@SpringBootTest//(classes = {RepositoryTestConfig.class})
+@SpringBootTest
+@ActiveProfiles("test")
 @Sql({ "schema.sql","data.sql"})
-//@Sql(scripts = {"schema.sql", "data.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
-//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 class MeliBeExamStatsTests {
 
 	@Autowired
@@ -40,7 +38,7 @@ class MeliBeExamStatsTests {
 		boolean ret1 = false, ret2 = false, ret3 = false, ret4 = false;
 		
 		ret1 = initialStatsTest();
-		
+		 
 		dnaRepo.save(new Dna(DnaCases.getValidHumanN6Dna(),"HUMAN"));
 		dnaRepo.save(new Dna(DnaCases.getValidHumanN6Dna2(),"HUMAN"));
 		dnaRepo.save(new Dna(DnaCases.getValidMutantN6ColumnAndDiagonalDna(),"MUTANT"));
@@ -55,7 +53,7 @@ class MeliBeExamStatsTests {
 		
 		ret4 = ratioGreaterThan1Test();
 		
-		assertEquals(true, ret1 && ret2 && ret3 && ret4);
+		assertThat(ret1 && ret2 && ret3 && ret4).isEqualTo(true);
 		
 	}
 	
